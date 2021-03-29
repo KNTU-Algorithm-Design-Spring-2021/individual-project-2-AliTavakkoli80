@@ -15,7 +15,9 @@ public class Main {
         // read text file to HashMap
         HashMap<String, String> mapFromFile = HashMapFromTextFile();
 
-        System.out.println(mapFromFile.toString());
+//        System.out.println(mapFromFile.toString());
+
+        System.out.println(mapFromFile.containsValue("asd"));
 
 
         // iterate over HashMap entries
@@ -55,7 +57,7 @@ public class Main {
                 // put name, number in HashMap if they are
                 // not empty
                 if (!name.equals("") && !number.equals(""))
-                    map.put(name, number);
+                    map.put(number,name);
             }
         } catch (Exception e) {
             e.printStackTrace();
