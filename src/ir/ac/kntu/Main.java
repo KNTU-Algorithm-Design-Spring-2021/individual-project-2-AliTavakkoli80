@@ -7,11 +7,11 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
-    final static String filePath
-            = "resources/words.txt";
-
 //    final static String filePath
-//            = "resources/words_alpha.txt";
+//            = "resources/words.txt";
+
+    final static String filePath
+            = "resources/words_alpha.txt";
 
     public static void main(String[] args) {
 
@@ -22,24 +22,42 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        String string = scanner.nextLine();
-        string.toLowerCase();
-        System.out.println(string);
-        String result = new String("");
+        String string = scanner.nextLine().toLowerCase();
+//        System.out.println(string);
+        StringBuilder result = new StringBuilder(new String(""));
+        int first = 0;
+        int last = string.length();
+        while (first != last){
+//            System.out.println(string.substring(first,last));
 
-        for (int i = 0; i < string.length(); i++) {
-            String tmp = "";
-            int j = 0;
-            while (!mapFromFile.containsValue(tmp)) {
-                tmp += string.charAt(j);
-                j++;
+            if (mapFromFile.containsValue(string.substring(first,last))){
+                System.out.println(string.substring(first,last));
+                result.append(string.substring(first, last));
+                result.append(" ");
+                first = last;
+                last = string.length();
+            }else {
+                last--;
             }
-            result += tmp;
-            result += " ";
+
         }
+
+//        for (int i = 0; i < string.length(); i++) {
+//            String tmp = "";
+//            int j = i;
+//            while (!mapFromFile.containsValue(tmp)) {
+//                tmp += string.charAt(j);
+//                System.out.println(string.charAt(j));
+//
+//                j++;
+//            }
+//            System.out.println("??");
+//            result += tmp;
+//            result += " ";
+//        }
         System.out.println(result);
 
-        System.out.println(mapFromFile.containsValue("abort"));
+//        System.out.println(mapFromFile.containsValue("plan"));
 
 
         // iterate over HashMap entries
