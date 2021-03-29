@@ -4,11 +4,14 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.HashMap;
-import java.util.Map;
+import java.util.Scanner;
 
 public class Main {
     final static String filePath
-            = "resources/words_alpha.txt";
+            = "resources/words.txt";
+
+//    final static String filePath
+//            = "resources/words_alpha.txt";
 
     public static void main(String[] args) {
 
@@ -17,7 +20,26 @@ public class Main {
 
 //        System.out.println(mapFromFile.toString());
 
-        System.out.println(mapFromFile.containsValue("asd"));
+        Scanner scanner = new Scanner(System.in);
+
+        String string = scanner.nextLine();
+        string.toLowerCase();
+        System.out.println(string);
+        String result = new String("");
+
+        for (int i = 0; i < string.length(); i++) {
+            String tmp = "";
+            int j = 0;
+            while (!mapFromFile.containsValue(tmp)) {
+                tmp += string.charAt(j);
+                j++;
+            }
+            result += tmp;
+            result += " ";
+        }
+        System.out.println(result);
+
+        System.out.println(mapFromFile.containsValue("abort"));
 
 
         // iterate over HashMap entries
@@ -57,7 +79,7 @@ public class Main {
                 // put name, number in HashMap if they are
                 // not empty
                 if (!name.equals("") && !number.equals(""))
-                    map.put(number,name);
+                    map.put(number, name);
             }
         } catch (Exception e) {
             e.printStackTrace();
