@@ -31,7 +31,7 @@ public class Main {
 //            System.out.println(string.substring(first,last));
 
             if (mapFromFile.containsValue(string.substring(first,last))){
-                System.out.println(string.substring(first,last));
+//                System.out.println(string.substring(first,last));
                 result.append(string.substring(first, last));
                 result.append(" ");
                 first = last;
