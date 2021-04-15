@@ -10,7 +10,7 @@ public class InputManager {
     }
 
     public String inputStringGetter(){
-        System.out.println("Enter th input string : ");
+        System.out.println("Enter the input string : ");
         return scanner.nextLine();
     }
 }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ir.ac.kntu</OriginalElement>
+  <nodes>
+    <node x="766.0" y="0.0">ir.ac.kntu.FileHandler</node>
+    <node x="0.0" y="42.0">ir.ac.kntu.OutputManager</node>
+    <node x="562.0" y="0.0">ir.ac.kntu.InputManager</node>
+    <node x="396.83333333333326" y="228.0">ir.ac.kntu.Main</node>
+    <node x="194.0" y="21.0">ir.ac.kntu.AlgorithmWordFinder</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ir.ac.kntu.Main" target="ir.ac.kntu.OutputManager">
+      <point x="-129.70833333333326" y="-92.0" />
+      <point x="408.625" y="208.0" />
+      <point x="29.0" y="208.0" />
+      <point x="-58.0" y="27.0" />
+    </edge>
+    <edge source="ir.ac.kntu.Main" target="ir.ac.kntu.AlgorithmWordFinder">
+      <point x="-58.95833333333326" y="-92.0" />
+      <point x="479.375" y="178.0" />
+      <point x="252.0" y="178.0" />
+      <point x="-116.0" y="48.0" />
+    </edge>
+    <edge source="ir.ac.kntu.Main" target="ir.ac.kntu.InputManager">
+      <point x="35.375" y="-92.0" />
+      <point x="573.7083333333333" y="168.0" />
+      <point x="654.0" y="168.0" />
+      <point x="0.0" y="69.0" />
+    </edge>
+    <edge source="ir.ac.kntu.Main" target="ir.ac.kntu.FileHandler">
+      <point x="82.54166666666663" y="-92.0" />
+      <point x="620.8749999999999" y="188.0" />
+      <point x="818.3333333333333" y="188.0" />
+      <point x="-104.66666666666669" y="69.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="630.5" y="322.5" />
+  <SelectedNodes>
+    <node>ir.ac.kntu.FileHandler</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
